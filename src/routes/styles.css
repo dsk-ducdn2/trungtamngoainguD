@@ -1161,6 +1161,8 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .mobile-category-item:hover {

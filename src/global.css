@@ -9,6 +9,7 @@ html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
+  scroll-behavior: smooth;
   font-family:
     ui-sans-serif,
     system-ui,

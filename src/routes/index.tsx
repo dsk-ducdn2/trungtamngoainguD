@@ -61,20 +61,20 @@ export default component$(() => {
       <header class="header">
         {/* Main Header */}
         <div class="main-header">
-          <div class="header-container">
-            <div class="logo">
+        <div class="header-container">
+          <div class="logo">
               <span class="logo-center">Trung tâm ngoại ngữ</span>
               <span class="logo-brand">Nhật Đức</span>
             </div>
             
             {/* Desktop Navigation */}
             <nav class="main-nav desktop-nav">
-              <a href="#" class="nav-link">Trang chủ</a>
-              <a href="#" class="nav-link">Giới thiệu</a>
-              <a href="#" class="nav-link">Khóa học</a>
-              <a href="#" class="nav-link">Lịch học</a>
-              <a href="#" class="nav-link">Tin tức</a>
-              <a href="#" class="nav-link">Liên hệ</a>
+              <a href="#home" class="nav-link">Trang chủ</a>
+              <a href="#about" class="nav-link">Giới thiệu</a>
+              <a href="#courses" class="nav-link">Khóa học</a>
+              <a href="#courses" class="nav-link">Lịch học</a>
+              <a href="#news" class="nav-link">Tin tức</a>
+              <a href="#contact" class="nav-link">Liên hệ</a>
               <div class="social-links">
                 <a href="#" class="social-link">f</a>
                 <a href="#" class="social-link">📷</a>
@@ -99,33 +99,33 @@ export default component$(() => {
           {/* Mobile Navigation Overlay */}
           <div class={`mobile-menu-overlay ${mobileMenuOpen.value ? 'active' : ''}`}>
             <nav class="mobile-nav">
-              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Trang chủ</a>
-              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Giới thiệu</a>
-              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Khóa học</a>
-              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Lịch học</a>
-              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Tin tức</a>
-              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Liên hệ</a>
+              <a href="#home" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Trang chủ</a>
+              <a href="#about" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Giới thiệu</a>
+              <a href="#courses" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Khóa học</a>
+              <a href="#courses" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Lịch học</a>
+              <a href="#news" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Tin tức</a>
+              <a href="#contact" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Liên hệ</a>
               
               {/* Mobile Course Categories */}
               <div class="mobile-course-categories">
                 <h3 class="mobile-category-title">Các khóa học</h3>
                 <div class="mobile-category-grid">
-                  <div class="mobile-category-item">
+                  <a href="#courses" class="mobile-category-item" onClick$={() => mobileMenuOpen.value = false}>
                     <span>🇯🇵</span>
                     <div>Tiếng Nhật<br/><small>Cơ bản - Nâng cao</small></div>
-                  </div>
-                  <div class="mobile-category-item">
+                  </a>
+                  <a href="#courses" class="mobile-category-item" onClick$={() => mobileMenuOpen.value = false}>
                     <span>🇩🇪</span>
                     <div>Tiếng Đức<br/><small>Giao tiếp - Du học</small></div>
-                  </div>
-                  <div class="mobile-category-item">
+                  </a>
+                  <a href="#courses" class="mobile-category-item" onClick$={() => mobileMenuOpen.value = false}>
                     <span>📝</span>
                     <div>Luyện thi<br/><small>JLPT - Goethe</small></div>
-                  </div>
-                  <div class="mobile-category-item">
+                  </a>
+                  <a href="#contact" class="mobile-category-item" onClick$={() => mobileMenuOpen.value = false}>
                     <span>✈️</span>
                     <div>Tư vấn<br/><small>Du học</small></div>
-                  </div>
+                  </a>
                 </div>
               </div>
               
@@ -134,7 +134,7 @@ export default component$(() => {
                 <a href="#" class="mobile-social-link">📷</a>
                 <a href="#" class="mobile-social-link">t</a>
               </div>
-            </nav>
+          </nav>
           </div>
         </div>
         
@@ -158,7 +158,7 @@ export default component$(() => {
       </header>
 
       {/* Hero Section */}
-      <section class="hero">
+      <section id="home" class="hero">
         <div class="hero-container">
           <div class="hero-content">
             <div class="content-box">
@@ -180,7 +180,7 @@ export default component$(() => {
       </section>
 
       {/* About Section */}
-      <section class="about-section">
+      <section id="about" class="about-section">
         <div class="about-container">
           <div class="about-image">
             <div class="house-illustration">
@@ -267,8 +267,8 @@ export default component$(() => {
             <p class="feature-description">
               Hàng nghìn học viên đã thành công với mục tiêu du học và làm việc tại Nhật Bản, Đức sau khi hoàn thành khóa học.
             </p>
-          </div>
-
+              </div>
+              
           <div class="feature-card">
             <div class="feature-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
@@ -279,12 +279,12 @@ export default component$(() => {
             <p class="feature-description">
               Phòng học được trang bị đầy đủ thiết bị hiện đại, môi trường học tập thoải mái và chuyên nghiệp.
             </p>
-          </div>
-        </div>
+                </div>
+              </div>
       </section>
 
       {/* Courses Section */}
-      <section class="courses-section">
+      <section id="courses" class="courses-section">
         <div class="courses-container">
           <h2 class="courses-title">Các khóa học</h2>
           <div class="courses-slider">
@@ -342,7 +342,7 @@ export default component$(() => {
       </section>
 
       {/* Activities & News Section */}
-      <section class="activities-section">
+      <section id="news" class="activities-section">
         <div class="activities-container">
           <h2 class="activities-title">Các hình ảnh hoạt động & và tin tức</h2>
           <div class="activities-grid">
@@ -423,7 +423,7 @@ export default component$(() => {
       </section>
 
       {/* Contact Form Section */}
-      <section class="contact-form-section">
+      <section id="contact" class="contact-form-section">
         <div class="contact-form-container">
           <div class="form-content">
             <div class="form-text">
@@ -433,8 +433,8 @@ export default component$(() => {
                 <span class="highlight">Vượt qua rào cản</span> - cần bước 
                 <span class="highlight">thành công</span>
               </p>
-            </div>
-            
+              </div>
+
             <div class="form-wrapper">
               <form class="consultation-form">
                 <div class="form-row">
@@ -493,9 +493,9 @@ export default component$(() => {
                       <option value="german-study">Tiếng Đức du học (B1-B2)</option>
                       <option value="german-goethe">Luyện thi Goethe (C1-C2)</option>
                     </select>
-                  </div>
                 </div>
-                
+              </div>
+
                 <button type="submit" class="submit-btn">GỬI</button>
               </form>
             </div>
@@ -542,8 +542,8 @@ export default component$(() => {
                   <p class="branch-phone">(+84) 126 - 922 - 0162 (Hưng)</p>
                   <p class="branch-email">hcm@nhatduc.edu.vn</p>
                 </div>
-              </div>
             </div>
+          </div>
 
             <div class="footer-hours">
               <h3 class="hours-title">GIỜ LÀM VIỆC</h3>
@@ -568,8 +568,8 @@ export default component$(() => {
               <a href="#" class="footer-social-link">Facebook</a>
               <a href="#" class="footer-social-link">Instagram</a>
               <a href="#" class="footer-social-link">Twitter</a>
-            </div>
           </div>
+        </div>
         </div>
       </footer>
     </>
