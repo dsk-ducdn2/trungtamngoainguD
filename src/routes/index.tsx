@@ -1,139 +1,147 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import Hero from "../components/starter/hero/hero";
-import Infobox from "../components/starter/infobox/infobox";
-
 export default component$(() => {
   return (
     <>
-      <Hero />
-      
-      {/* About Section */}
-      <div class="container container-center container-spacing-xl">
-        <h2>Về Trung tâm ngoại ngữ D</h2>
-        <p class="intro-text">
-          Trung tâm ngoại ngữ D là địa chỉ tin cậy để học ngoại ngữ chất lượng cao. 
-          Với đội ngũ giảng viên giàu kinh nghiệm và phương pháp giảng dạy hiện đại, 
-          chúng tôi cam kết mang đến cho học viên trải nghiệm học tập tốt nhất.
-        </p>
-      </div>
-
-      <div role="presentation" class="ellipsis"></div>
-
-      {/* Courses Section */}
-      <div class="container container-flex">
-        <Infobox>
-          <div q:slot="title" class="icon icon-apps">
-            Tiếng Anh
+      {/* Header */}
+      <header class="header">
+        <div class="header-container">
+          <div class="logo">
+            <div class="logo-img">🚀</div>
+            <span class="logo-text">FutureLang</span>
           </div>
-          <ul>
-            <li>Tiếng Anh giao tiếp</li>
-            <li>Tiếng Anh học thuật</li>
-            <li>Luyện thi IELTS, TOEIC</li>
-            <li>Tiếng Anh cho trẻ em</li>
-          </ul>
-        </Infobox>
-
-        <div>
-          <Infobox>
-            <div q:slot="title" class="icon icon-community">
-              Tiếng Trung
-            </div>
-            <ul>
-              <li>Tiếng Trung giao tiếp</li>
-              <li>Tiếng Trung thương mại</li>
-              <li>Luyện thi HSK</li>
-              <li>Tiếng Trung cho người mới bắt đầu</li>
-            </ul>
-          </Infobox>
-
-          <Infobox>
-            <div q:slot="title" class="icon icon-cli">
-              Tiếng Nhật
-            </div>
-            <ul>
-              <li>Tiếng Nhật giao tiếp</li>
-              <li>Tiếng Nhật du học</li>
-              <li>Luyện thi JLPT</li>
-              <li>Văn hóa Nhật Bản</li>
-            </ul>
-          </Infobox>
+          <nav class="nav">
+            <a href="#" class="nav-link">Trang chủ</a>
+            <a href="#" class="nav-link">Giới thiệu</a>
+            <a href="#" class="nav-link">Giảng viên</a>
+            <a href="#" class="nav-link">Báo giá</a>
+            <a href="#" class="nav-link">Đánh giá</a>
+            <a href="#" class="nav-link">Liên hệ</a>
+          </nav>
+          <button class="cta-button">TƯ VẤN NGAY</button>
         </div>
-      </div>
+      </header>
 
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
+      {/* Hero Section */}
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="hero-subtitle">FUTURELANG - ỨNG DỤNG HỌC TIẾNG ANH 4.0</span>
+              <span class="hero-main">Đạt được mục tiêu cá nhân</span>
+              <span class="hero-main">với khóa học tiếng Anh</span>
+              <span class="hero-main">dành riêng cho bạn</span>
+            </h1>
+            
+            <div class="download-buttons">
+              <button class="download-btn google-play">
+                <div class="download-icon">📱</div>
+                <div>
+                  <span class="download-text">Tải ứng dụng trên</span>
+                  <span class="download-store">GOOGLE PLAY</span>
+                </div>
+              </button>
+              <button class="download-btn app-store">
+                <div class="download-icon">📲</div>
+                <div>
+                  <span class="download-text">Tải ứng dụng trên</span>
+                  <span class="download-store">APP STORE</span>
+                </div>
+              </button>
+              <button class="download-btn desktop">
+                <div class="download-icon">💻</div>
+                <div>
+                  <span class="download-text">Cài đặt trên</span>
+                  <span class="download-store">MÁY TÍNH</span>
+                </div>
+              </button>
+            </div>
 
-      {/* Teachers Section */}
-      <div class="container container-center container-spacing-xl">
-        <h2>Đội ngũ giảng viên</h2>
-        <p class="intro-text">
-          Tất cả giảng viên tại trung tâm đều có bằng cấp chuyên môn cao, 
-          kinh nghiệm giảng dạy nhiều năm và được đào tạo phương pháp sư phạm hiện đại.
-        </p>
-        <div class="features-grid">
-          <div class="feature-item">
-            <h4>100% Native Speaker</h4>
-            <p>Giảng viên bản ngữ từ các nước</p>
+            <button class="learn-more-btn">TÌM HIỂU NGAY →</button>
           </div>
-          <div class="feature-item">
-            <h4>Chứng chỉ quốc tế</h4>
-            <p>TESOL, TEFL, JLPT N1, HSK Level 6</p>
-          </div>
-          <div class="feature-item">
-            <h4>Kinh nghiệm 5+ năm</h4>
-            <p>Giảng dạy cho mọi lứa tuổi và trình độ</p>
+
+          <div class="hero-phones">
+            <div class="phone phone-1">
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <div class="app-interface">
+                    📚 FutureLang<br/>
+                    🎯 Lessons<br/>
+                    📊 Progress<br/>
+                    🏆 Achievements
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="phone phone-2">
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <div class="app-interface">
+                    🗣️ Speaking<br/>
+                    📖 Reading<br/>
+                    🎧 Listening<br/>
+                    ✍️ Writing
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Section */}
-      <div class="container container-flex">
-        <Infobox>
-          <div q:slot="title" class="icon icon-community">
-            Liên hệ đăng ký
+      {/* Feature Cards */}
+      <section class="features">
+        <div class="features-container">
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Học tập thông minh</h3>
+            <p>AI cá nhân hóa lộ trình học</p>
           </div>
-          <ul>
-            <li>
-              <strong>Địa chỉ:</strong> Đà Nẵng
-            </li>
-            <li>
-              <strong>Điện thoại:</strong> 0123.456.789
-            </li>
-            <li>
-              <strong>Email:</strong> info@languagecenter-d.com
-            </li>
-            <li>
-              <strong>Website:</strong> www.languagecenter-d.com
-            </li>
-          </ul>
-        </Infobox>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Cộng đồng học tập</h3>
+            <p>Kết nối với học viên toàn cầu</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Luyện tập tương tác</h3>
+            <p>Gamification và thực hành</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Chứng chỉ quốc tế</h3>
+            <p>Được công nhận toàn cầu</p>
+          </div>
+        </div>
+      </section>
 
-        <Infobox>
-          <div q:slot="title" class="icon icon-apps">
-            Thời gian hoạt động
-          </div>
-          <ul>
-            <li><strong>Thứ 2 - Thứ 6:</strong> 8:00 - 21:00</li>
-            <li><strong>Thứ 7 - Chủ nhật:</strong> 8:00 - 18:00</li>
-            <li><strong>Tư vấn online:</strong> 24/7</li>
-          </ul>
-        </Infobox>
+      {/* Floating Action Buttons */}
+      <div class="floating-buttons">
+        <button class="floating-btn zalo" title="Chat Zalo">
+          💬
+        </button>
+        <button class="floating-btn phone" title="Gọi điện">
+          📞
+        </button>
+        <button class="floating-btn messenger" title="Messenger">
+          💌
+        </button>
       </div>
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Trung tâm ngoại ngữ D - Học ngoại ngữ chất lượng cao",
+  title: "FutureLang - Ứng dụng học tiếng Anh 4.0",
   meta: [
     {
       name: "description",
-      content: "Trung tâm ngoại ngữ D - Địa chỉ tin cậy để học tiếng Anh, tiếng Trung, tiếng Nhật với đội ngũ giảng viên chuyên nghiệp và phương pháp giảng dạy hiện đại.",
+      content: "FutureLang - Ứng dụng học tiếng Anh 4.0. Đạt được mục tiêu cá nhân với khóa học tiếng Anh dành riêng cho bạn.",
     },
     {
       name: "keywords",
-      content: "học tiếng anh, học tiếng trung, học tiếng nhật, trung tâm ngoại ngữ, IELTS, TOEIC, HSK, JLPT",
+      content: "FutureLang, học tiếng anh, ứng dụng học tiếng anh, tiếng anh 4.0, khóa học tiếng anh",
     },
   ],
 };
