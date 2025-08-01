@@ -105,6 +105,30 @@ export default component$(() => {
               <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Lịch học</a>
               <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Tin tức</a>
               <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Liên hệ</a>
+              
+              {/* Mobile Course Categories */}
+              <div class="mobile-course-categories">
+                <h3 class="mobile-category-title">Các khóa học</h3>
+                <div class="mobile-category-grid">
+                  <div class="mobile-category-item">
+                    <span>🇯🇵</span>
+                    <div>Tiếng Nhật<br/><small>Cơ bản - Nâng cao</small></div>
+                  </div>
+                  <div class="mobile-category-item">
+                    <span>🇩🇪</span>
+                    <div>Tiếng Đức<br/><small>Giao tiếp - Du học</small></div>
+                  </div>
+                  <div class="mobile-category-item">
+                    <span>📝</span>
+                    <div>Luyện thi<br/><small>JLPT - Goethe</small></div>
+                  </div>
+                  <div class="mobile-category-item">
+                    <span>✈️</span>
+                    <div>Tư vấn<br/><small>Du học</small></div>
+                  </div>
+                </div>
+              </div>
+              
               <div class="mobile-social-links">
                 <a href="#" class="mobile-social-link">f</a>
                 <a href="#" class="mobile-social-link">📷</a>
