@@ -95,7 +95,7 @@ export default component$(() => {
           </div>
           <ul>
             <li>
-              <strong>Địa chỉ:</strong> 123 Đường ABC, Quận XYZ, TP.HCM
+              <strong>Địa chỉ:</strong> Đà Nẵng
             </li>
             <li>
               <strong>Điện thoại:</strong> 0123.456.789
