@@ -4,6 +4,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
   const currentSlide = useSignal(0);
   const coursesPerSlide = 3;
+  const mobileMenuOpen = useSignal(false);
   
   const courses = [
     {
@@ -65,7 +66,9 @@ export default component$(() => {
               <span class="logo-center">Trung tâm ngoại ngữ</span>
               <span class="logo-brand">Nhật Đức</span>
             </div>
-            <nav class="main-nav">
+            
+            {/* Desktop Navigation */}
+            <nav class="main-nav desktop-nav">
               <a href="#" class="nav-link">Trang chủ</a>
               <a href="#" class="nav-link">Giới thiệu</a>
               <a href="#" class="nav-link">Khóa học</a>
@@ -76,6 +79,36 @@ export default component$(() => {
                 <a href="#" class="social-link">f</a>
                 <a href="#" class="social-link">📷</a>
                 <a href="#" class="social-link">t</a>
+              </div>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button 
+              class="mobile-menu-btn"
+              onClick$={() => mobileMenuOpen.value = !mobileMenuOpen.value}
+              aria-label="Toggle mobile menu"
+            >
+              <span class={`hamburger ${mobileMenuOpen.value ? 'active' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+          {/* Mobile Navigation Overlay */}
+          <div class={`mobile-menu-overlay ${mobileMenuOpen.value ? 'active' : ''}`}>
+            <nav class="mobile-nav">
+              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Trang chủ</a>
+              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Giới thiệu</a>
+              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Khóa học</a>
+              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Lịch học</a>
+              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Tin tức</a>
+              <a href="#" class="mobile-nav-link" onClick$={() => mobileMenuOpen.value = false}>Liên hệ</a>
+              <div class="mobile-social-links">
+                <a href="#" class="mobile-social-link">f</a>
+                <a href="#" class="mobile-social-link">📷</a>
+                <a href="#" class="mobile-social-link">t</a>
               </div>
             </nav>
           </div>
