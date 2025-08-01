@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "Demo app with sample routes",
+  "name": "language-center-nhat-duc",
+  "description": "Trung tâm ngoại ngữ Nhật Đức - Landing page",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
